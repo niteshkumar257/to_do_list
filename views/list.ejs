@@ -1,0 +1,31 @@
+
+<%-include("header")-%>
+    <div class="box" id="heading">
+        <h1 style="color: black;">IT IS  <%= day %></h1>
+    </div>
+    <div class="box">
+       <div class="item">
+           
+       </div class=box>
+        
+            <%  for(var i=0;i<listday.length;i++) { %>
+
+               <% if(listday[i].length!=0){ %> 
+                <!-- feature added by me -->
+                <div class="item new">
+                    <input type="checkbox" >
+                    
+                    <p style="color: rgb(22, 21, 22);"><%=listday[i]%></p>
+                </div>
+           <% } %>
+                
+             <% } %>
+             <form  class="item " action="/"  method="post">
+                <input type="text" name="n1" placeholder="New Item" autocomplete="off" >
+                <button type="submit" name="list" value="<%=day%>">+</button>
+            </form>      
+             
+    </div>
+    
+    
+    <%- include("footer")-%>
